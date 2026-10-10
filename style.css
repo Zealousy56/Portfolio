@@ -1,0 +1,18 @@
+:root {
+    /* Light mode */
+    --background-color: #ffffff;
+    --surface-color: #f5f5f5;
+    --text-color: #222222;
+    --primary-color: #2563eb;
+    --border-color: #dddddd;
+}
+
+[data-theme="dark"] {
+    /* Dark mode */
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-color: #ffffff;
+    --primary-color: #60a5fa;
+    --border-color: #444444;
+}
+
