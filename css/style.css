@@ -80,10 +80,6 @@ body{
 .about-sentence {
     flex: 0 0 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     box-sizing: border-box;
     padding: 40px;
 
@@ -98,3 +94,80 @@ body{
     padding: 20px;
 }
 
+#skills {
+    flex: 1 1 0;
+    background-color: var(--background-color);
+
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    height: 100dvh;
+}
+
+#skills .header-container {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    width: 100%;
+    height: 100%;
+}
+
+#skills .header-container h2, #skills .header-container h3{
+    flex: 0 0 100%;
+
+    text-align: center;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+#skills .list-container {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    width: 100%;
+    height: 100%;
+}
+
+#skills .list-container ul {
+    flex: 0 0 100%;
+
+    text-align: center;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+#projects {
+    display: flex;
+
+    height: 100vh;
+    height: 100dvh;
+}
+
+#projects .header-container {
+    width: 30%;
+    height: 100%;
+}
+
+#projects .projects {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+#projects .project-container {
+    flex: 0 0 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    padding: 40px;
+
+    scroll-snap-align: start;
+}
