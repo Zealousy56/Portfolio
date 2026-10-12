@@ -44,18 +44,57 @@ body{
 }
 
 #about {
-    padding: 50px 0;
     background-color: var(--surface-color);
-    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    scroll-snap-type: y proximity;
+}
+
+#about-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    scroll-snap-align: start;
 }
 
 #about h2{
-    font-size: 18px;
-    
+    font-weight: normal;
+    font-size: 65px;
 }
 
-#about p {
-    font-size: 14px;
-    max-width: 600px;
-    margin: 20px auto;
+#about-text{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    height: 100vh;
+    height: 100dvh;
 }
+
+.about-sentence {
+    flex: 0 0 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    padding: 40px;
+
+    scroll-snap-align: start;
+}
+
+.about-sentence p {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+    padding: 20px;
+}
+
