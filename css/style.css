@@ -157,17 +157,43 @@ body{
     height: 100%;
 
     display: flex;
+    align-items: center;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
 
 #projects .project-container {
     flex: 0 0 100%;
+    height: 80%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     box-sizing: border-box;
     padding: 40px;
 
     scroll-snap-align: start;
 }
+
+#projects .project-container .image-placeholder {
+    grid-row: 1/6;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    height: 100dvh;
+}
+
+#contact .link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    height: 100%;
+}
+
