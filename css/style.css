@@ -430,10 +430,10 @@ body{
 
     display: grid;
     grid-template-columns: 9fr 1fr 9fr;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
-    height: 120dvh;
+    height: 80dvh;
 }
 
 .link-container{
@@ -466,8 +466,13 @@ body{
 }
 
 #or{
+    height: 100%;
     font-size: 50px;
     font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
 }
 
 .form-container{
