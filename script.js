@@ -84,3 +84,39 @@ window.addEventListener("scroll", () => {
 }, { passive: true });
 
 updateAnimations();
+
+const skillsTrack = document.querySelector(".skills-track");
+const nextButton = document.querySelector(".skills-next");
+const skillsCards = document.querySelectorAll(".skills-card");
+
+nextButton.addEventListener("click", () => {
+    const currentIndex = Math.round(
+        skillsTrack.scrollLeft / skillsTrack.clientWidth
+    );
+
+    const nextIndex = (currentIndex + 1) % skillsCards.length;
+
+    skillsCards[nextIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start"
+    });
+});
+
+const projectList = document.querySelector(".projects-list");
+const nextProject = document.querySelector(".project-next");
+const projectCards = document.querySelectorAll(".project-card");
+
+nextProject.addEventListener("click", () => {
+    const currentIndex = Math.round(
+        projectList.scrollLeft / projectList.clientWidth
+    );
+
+    const nextIndex = (currentIndex + 1) % projectCards.length;
+
+    projectCards[nextIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "start"
+    });
+});
