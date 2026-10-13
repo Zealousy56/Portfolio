@@ -11,11 +11,7 @@ body{
     margin: 0;
 }
 
-.container {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
+
 
 #header {
     background-color: var(--background-color);
@@ -174,10 +170,10 @@ body{
     background-color: var(--surface-color);
 
     display: flex;
-
+    align-items: start;
 
     width: 100%;
-    height: 150dvh;
+    height: 200dvh;
 
 }
 
@@ -187,14 +183,15 @@ body{
 
 
     display: flex;
+    align-items: center;
     width: 100%;
-    height: 75%;
+    height: 50%;
 }
 
 .skills-track {
     display: flex;
     width: 100%;
-    height: 70%;
+    height: 86%;
 
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -235,6 +232,20 @@ body{
     padding: 200px;
     box-sizing: border-box;
 
+}
+
+.skills-card img{
+    grid-column: 1;
+    grid-row: 2;
+
+    width: auto;
+    height: 500px;
+
+    object-fit: contain;
+    flex-shrink: 1;
+
+    border-radius: 10px;
+    padding-left: 40%
 }
 
 .skills-card h3 {
@@ -412,34 +423,105 @@ body{
 }
 
 #contact {
-    background-color: var(--background-color);
+    background-color: var(--surface-color);
 
     position: relative;
     z-index: 4;
 
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 9fr 1fr 9fr;
+    justify-content: space-around;
     align-items: center;
 
-    height: 100vh;
-    height: 100dvh;
+    height: 120dvh;
 }
 
+.link-container{
+    padding: 20% 10%;
 
-
-#contact .link-container {
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: start;
 
-    width: 40%;
+    width: 100%;
     height: 100%;
 }
 
-#footer {
-    background-color: var(--background-color);
+.link-container h2{
+    font-size: 100px;
+}
 
+.link-container a{
+    color: var(--text2-color);
+    background-color: var(--link-color);
+
+    text-decoration: none;
+    font-weight: bold;
+
+    width: 100px;
+    padding: 20px;
+    border: 3px #000 solid;
+    margin: 5px;
+}
+
+#or{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.form-container{
+    padding: 5% 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.form-container h2{
+    font-size: 70px;
+    line-height: 1em;
+}
+
+.message{
+    padding: 20px 4px;
+
+    width: 100%;
+}
+
+.form-group{
+    padding-bottom: 15px;
+}
+
+.form-group label{
+    display: block;
+}
+
+.form-group input{
+    padding: 8px;
+    width: 100%;
+}
+
+.form-group textarea{
+    padding: 8px;
+    width: 100%;
+}
+
+.message input[type = "submit"]{
+    background-color: var(--footer-color);
+    color: var(--text2-color);
+    padding: 10px 15px;
+    font-size: 20px;
+    border: none;
+}
+
+#footer {
+    background-color: var(--footer-color);
+    color: var(--text2-color);
     position: relative;
     z-index: 5;
 
@@ -447,6 +529,5 @@ body{
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
-    height: 100dvh;
+    height: 50dvh;
 }
